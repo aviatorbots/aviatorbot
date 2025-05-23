@@ -8,7 +8,7 @@ function getRandomMultiplier() {
   return Math.max(1.01, parseFloat((1 + (-Math.log(r))).toFixed(2)));
 }
 
-const socket = new WebSocket('wss://game-server.aviator.com');
+const socket = new WebSocket('wss://game-server.betika.com');
 socket.onmessage = (event) => {
   const data = JSON.parse(event.data);
   console.log('Current multiplier:', data.multiplier);
